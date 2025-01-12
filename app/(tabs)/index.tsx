@@ -1,70 +1,53 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
-import InputBox from "@/components/InputBox";
-import CustomButton from "@/components/CustomButton";
-import { LinearGradient } from "expo-linear-gradient";
-import { useNavigation } from "expo-router";
-import CustomButton2 from "@/components/CustomButton2";
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const index = () => {
+const IndexScreen = () => {
+  const [isSplashVisible, setIsSplashVisible] = useState(true);
   const navigation = useNavigation();
-  return (
-    <View>
-      <LinearGradient
-        locations={[0.1, 1]}
-        start={{ x: 0, y: 0.1 }}
-        end={{ x: 1, y: 0.2 }}
-        colors={["#fef4f5", "#edf6ff"]}
-        style={style.background}
-      />
 
-      <Image
-        style={style.InstaIcon}
-        source={require("../../assets/images/instagram.png")}
-      />
-      <InputBox
-        placeholder={"Username, email or mobile number"}
-        style={{ marginTop: 60 }}
-      />
-      <InputBox placeholder={"Password"} secureTextEntry />
-      <CustomButton
-        onPress={() => console.log("Button Pressed")}
-        style={{ marginTop: 20 }}
-        buttonTitle={"Login"}
-      />
-      <TouchableOpacity style={{alignSelf:'center'}}>
-       <Text style={style.ForgotP}>Forgot password?</Text> 
-       </TouchableOpacity>
-      <CustomButton2
-      style={{marginTop:180,}} 
-      onPress={() => navigation.navigate("SignUpNumber")}
-       buttonTitle={"Create new account"}/>
-     
-      
-    </View>
-  );
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsSplashVisible(false);
+      navigation.navigate('(screens)/Login');
+    }, 3000); 
+
+    return () => clearTimeout(timer);
+  }, [navigation]);
+
+  if (isSplashVisible) {
+    return (
+      <View style={styles.splashContainer}>
+        <Image
+          style={styles.splashImage}
+          source={require('../../assets/images/instagram.png')}
+        />
+        <Text style={styles.splashText}>Welcome to Instagram</Text>
+        
+      </View>
+    );
+  }
+
+  return null;
 };
 
-export default index;
+export default IndexScreen;
 
-const style = StyleSheet.create({
-  InstaIcon: {
+const styles = StyleSheet.create({
+  splashContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  splashImage: {
+  
     width: 70,
     height: 70,
-    marginTop: 150,
-    alignSelf: "center",
   },
-
-  background: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    height: 800,
+  splashText: {
+    marginTop: 20,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
-
-  ForgotP :{
-   fontWeight:600,
-    marginTop:20, 
-  }
 });

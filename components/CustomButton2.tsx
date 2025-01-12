@@ -34,7 +34,7 @@ const style = StyleSheet.create({
    color : AppColor.BUTTON,
    fontSize: 15,
    textAlign:'center',
-   paddingVertical:16,
+   paddingVertical:14,
    
   }
 });

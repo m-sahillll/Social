@@ -31,13 +31,13 @@ const SignUpEmail = () => {
         buttonTitle={"Next"}
       />
       <CustomButton2 
-        onPress={() => navigation.navigate("SignUpNumber")}
+        onPress={() => navigation.navigate("(screens)/SignUpNumber")}
         style={{ marginTop: 20 }}
         buttonTitle={"Sign up with mobile number"}
       />
 
       <TouchableOpacity
-        onPress={() => navigation.navigate("index")}
+        onPress={() => navigation.navigate("(screens)/Login")}
         style={{ alignSelf: "center" }}
       >
         <Text style={style.HaveAcc}>I already have an account</Text>

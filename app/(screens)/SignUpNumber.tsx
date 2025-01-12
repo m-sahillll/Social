@@ -30,12 +30,12 @@ const SignUpNumber = () => {
        style={{marginTop :20}}
         buttonTitle={"Next"}/>
         <CustomButton2 
-        onPress={() => navigation.navigate("SignUpEmail")}
+        onPress={() => navigation.navigate("(screens)/SignUpEmail")}
         style={{marginTop :20,}}
         buttonTitle={"Sign up with email"}/>
         
               <TouchableOpacity 
-               onPress={() => navigation.navigate("index")}
+               onPress={() => navigation.navigate("(screens)/Login")}
               style={{alignSelf:'center'}}>
                
                <Text style={style.HaveAcc}>I already have an account</Text> 
