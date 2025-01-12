@@ -32,6 +32,10 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(screens)" options={{ headerShown: false }} />
+        <Stack.Screen name="SignUpNumber" />
+        <Stack.Screen name="SignUpEmail" />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
