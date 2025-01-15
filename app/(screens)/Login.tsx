@@ -3,8 +3,8 @@ import React from "react";
 import InputBox from "@/components/InputBox";
 import CustomButton from "@/components/CustomButton";
 import { LinearGradient } from "expo-linear-gradient";
-import { useNavigation } from "@react-navigation/native";
 import CustomButton2 from "@/components/CustomButton2";
+import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
   const navigation = useNavigation();
@@ -25,23 +25,35 @@ const Login = () => {
       <InputBox placeholder={"Username, email or mobile number"} />
       <InputBox placeholder={"Password"} secureTextEntry />
       <CustomButton
-        onPress={() => console.log("Button Pressed")}
+        onPress={() =>
+          navigation.navigate("(mainscreens)", {
+            screen: "home",
+          })
+        }
         style={{ marginTop: 20 }}
         buttonTitle={"Login"}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate("(screens)/ForgotPassword")}
+        onPress={() => navigation.navigate("ForgotPassword")}
         style={{ alignSelf: "center" }}
       >
         <Text style={style.ForgotP}>Forgot password?</Text>
       </TouchableOpacity>
-       <CustomButton2 
-       style={{marginTop:250}}
-       buttonTitle={"Create new account"}
-       onPress={() => {navigation.navigate("(screens)/SignUpNumber")}}/>
-       <Image 
-       style={{height:50,width:80,alignSelf:'center'}}
-       source={require("../../assets/images/meta2.png")}/>
+      <View style={{ marginTop: 220 }}>
+        <CustomButton2
+          style={{}}
+          buttonTitle={"Create new account"}
+          onPress={() => {
+            navigation.navigate("(screens)", {
+              screen: "SignUpNumber",
+            });
+          }}
+        />
+      </View>
+      <Image
+        style={{ height: 50, width: 80, alignSelf: "center" }}
+        source={require("../../assets/images/meta2.png")}
+      />
     </View>
   );
 };

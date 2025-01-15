@@ -18,6 +18,7 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
 
+  
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
@@ -34,11 +35,8 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="index" />
         <Stack.Screen name="+not-found" />
-        <Stack.Screen name="(screens)/Login"  options={{ headerShown: false }}/>
-        <Stack.Screen name="(screens)/SignUpNumber"  options={{ headerShown: false }}/>
-        <Stack.Screen name="(screens)/SignUpEmail" options={{ headerShown: false }} />
-        <Stack.Screen name="(screens)/ForgotPassword" options={{ headerShown: false }} />
-        <Stack.Screen name="(screens)/ForgotPassword2" options={{ headerShown: false }} />
+        <Stack.Screen name="(screens)" options={{headerShown : false}} />
+        <Stack.Screen name="(mainscreens)" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

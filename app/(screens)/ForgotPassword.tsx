@@ -7,6 +7,7 @@ import CustomButton from "@/components/CustomButton";
 import CustomButton2 from "@/components/CustomButton2";
 import { Linking } from "react-native";
 import { useNavigation } from "expo-router";
+import ForgotPassword2 from "./ForgotPassword2";
 
 const ForgotPassword = () => {
   const navigation = useNavigation();
@@ -49,7 +50,7 @@ const ForgotPassword = () => {
         buttonTitle={"Continue"}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate("(screens)/ForgotPassword2")}
+        onPress={() => navigation.navigate("ForgotPassword2")}
         style={{ alignSelf: "center", marginTop: 20 }}
       >
         <Text style={{ fontWeight: "bold" }}>

@@ -9,7 +9,9 @@ const IndexScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsSplashVisible(false);
-      navigation.navigate('(screens)/Login');
+      navigation.navigate("(screens)", {
+        screen: "Login",
+      })
     }, 3000); 
 
     return () => clearTimeout(timer);

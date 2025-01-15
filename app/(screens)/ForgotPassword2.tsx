@@ -42,7 +42,7 @@ const ForgotPassword2 = () => {
       buttonTitle={"Continue"}
       />
       <TouchableOpacity 
-       onPress={() => navigation.navigate("(screens)/ForgotPassword")}
+       onPress={() => navigation.navigate("ForgotPassword")}
        style={{alignSelf:'center',marginTop:20}}>
         <Text style={{fontWeight:'bold',}} >Search by email instead</Text>
       </TouchableOpacity>

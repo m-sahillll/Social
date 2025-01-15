@@ -30,16 +30,17 @@ const SignUpNumber = () => {
        style={{marginTop :20}}
         buttonTitle={"Next"}/>
         <CustomButton2 
-        onPress={() => navigation.navigate("(screens)/SignUpEmail")}
+        onPress={() => navigation.navigate("SignUpEmail")}
         style={{marginTop :20,}}
         buttonTitle={"Sign up with email"}/>
-        
+             <View style={{marginTop:335}}>
               <TouchableOpacity 
-               onPress={() => navigation.navigate("(screens)/Login")}
+               onPress={() => navigation.navigate("Login")}
               style={{alignSelf:'center'}}>
                
                <Text style={style.HaveAcc}>I already have an account</Text> 
                </TouchableOpacity>
+               </View>
     </View>
   )
 }
@@ -76,7 +77,7 @@ const style=StyleSheet.create ({
   HaveAcc :{
     fontWeight:600,
     color: AppColor.BUTTON,
-    marginTop: 340,
+   
   }
 
 })
