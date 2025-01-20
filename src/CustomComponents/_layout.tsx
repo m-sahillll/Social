@@ -9,7 +9,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
-import SignUpEmail from "./(screens)/SignUpEmail";
+import SignUpEmail from "@/src/app/(auth)/SignUpEmail";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 
@@ -35,26 +35,8 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="+not-found" />
-        <Stack.Screen 
-          name="Login" 
-          options={{ headerShown: false }} />
-        <Stack.Screen
-          name="SignUpNumber"
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="SignUpEmail"
-          options={{ headerShown: false}}
-        />
-        <Stack.Screen
-          name="ForgotPassword"
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="ForgotPassword2"
-          options={{ headerShown: false }}
-        />
+        <Stack.Screen name="Home" options={{ headerShown: false }} />
+       
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

@@ -1,20 +1,19 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { AppColor } from "@/utils/AppColor";
-import InputBox from "@/components/InputBox";
-import CustomButton from "@/components/CustomButton";
-import CustomButton2 from "@/components/CustomButton2";
+import { AppColor } from "@/src/utils/AppColor";
+import InputBox from "@/src/CustomComponents/InputBox";
+import CustomButton from "@/src/CustomComponents/CustomButton";
+import CustomButton2 from "@/src/CustomComponents/CustomButton2";
 import { Linking } from "react-native";
 import { useNavigation } from "expo-router";
-import ForgotPassword2 from "./ForgotPassword2";
 
-const ForgotPassword = () => {
+const ForgotPassword2 = () => {
   const navigation = useNavigation();
 
   const openInstagramHelpCenter = () => {
     Linking.openURL("https://help.instagram.com/");
-  }
+  };
   const openFacebook = () => {
     Linking.openURL("https://www.facebook.com/");
   };
@@ -28,18 +27,15 @@ const ForgotPassword = () => {
         style={style.background}
       />
       <Text style={style.MobNo}>Find your account</Text>
-      <Text style={style.text}>Enter your email or username.</Text>
-      <TouchableOpacity
-        onPress={openInstagramHelpCenter}>
-       <Text
-        style={{ color: AppColor.BUTTON, marginTop: 10, fontWeight: "bold" }}
-      >
-        Can't reset your password?
-      </Text>
+      <Text style={style.text}>Enter your mobile number</Text>
+      <TouchableOpacity onPress={openInstagramHelpCenter}>
+        <Text
+          style={{ color: AppColor.BUTTON, marginTop: 10, fontWeight: "bold" }}
+        >
+          Can't reset your password?
+        </Text>
       </TouchableOpacity>
-      <InputBox 
-       keyboardType="email-address"
-       placeholder="Email or username" />
+      <InputBox keyboardType="phone-pad" placeholder="Mobile number" />
       <Text style={{ marginTop: 10, opacity: 0.6 }}>
         You may recieve WhatsApp and SMS notifications from us for security and
         login purposes.
@@ -50,12 +46,10 @@ const ForgotPassword = () => {
         buttonTitle={"Continue"}
       />
       <TouchableOpacity
-        onPress={() => navigation.navigate("ForgotPassword2")}
+        onPress={() => navigation.navigate("ForgotPassword")}
         style={{ alignSelf: "center", marginTop: 20 }}
       >
-        <Text style={{ fontWeight: "bold" }}>
-          Search by mobile number instead
-        </Text>
+        <Text style={{ fontWeight: "bold" }}>Search by email instead</Text>
       </TouchableOpacity>
       <Text style={{ alignSelf: "center", marginTop: 40 }}>
         -------------------------OR------------------------
@@ -69,7 +63,7 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ForgotPassword2;
 
 const style = StyleSheet.create({
   background: {

@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import InputBox from "@/components/InputBox";
-import CustomButton from "@/components/CustomButton";
-import CustomButton2 from "@/components/CustomButton2";
-import { AppColor } from "@/utils/AppColor";
+import InputBox from "@/src/CustomComponents/InputBox";
+import CustomButton from "@/src/CustomComponents/CustomButton";
+import CustomButton2 from "@/src/CustomComponents/CustomButton2";
+import { AppColor } from "@/src/utils/AppColor";
 import { useNavigation } from "@react-navigation/native";
 
 const SignUpEmail = () => {
@@ -30,18 +30,18 @@ const SignUpEmail = () => {
         style={{ marginTop: 20 }}
         buttonTitle={"Next"}
       />
-      <CustomButton2 
+      <CustomButton2
         onPress={() => navigation.navigate("SignUpNumber")}
         style={{ marginTop: 20 }}
         buttonTitle={"Sign up with mobile number"}
       />
-       <View style={{ marginTop: 370}}>
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Login")}
-        style={{ alignSelf: "center" }}
-      >
-        <Text style={style.HaveAcc}>I already have an account</Text>
-      </TouchableOpacity>
+      <View style={{ marginTop: 370 }}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Login")}
+          style={{ alignSelf: "center" }}
+        >
+          <Text style={style.HaveAcc}>I already have an account</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -76,6 +76,5 @@ const style = StyleSheet.create({
   HaveAcc: {
     fontWeight: 600,
     color: AppColor.BUTTON,
-   
   },
 });

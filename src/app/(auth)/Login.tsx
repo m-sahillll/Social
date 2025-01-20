@@ -1,9 +1,9 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-import InputBox from "@/components/InputBox";
-import CustomButton from "@/components/CustomButton";
+import InputBox from "@/src/CustomComponents/InputBox";
+import CustomButton from "@/src/CustomComponents/CustomButton";
 import { LinearGradient } from "expo-linear-gradient";
-import CustomButton2 from "@/components/CustomButton2";
+import CustomButton2 from "@/src/CustomComponents/CustomButton2";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
@@ -44,9 +44,7 @@ const Login = () => {
           style={{}}
           buttonTitle={"Create new account"}
           onPress={() => {
-            navigation.navigate("(screens)", {
-              screen: "SignUpNumber",
-            });
+           navigation.navigate("SignUpNumber")
           }}
         />
       </View>
