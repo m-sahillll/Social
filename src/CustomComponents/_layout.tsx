@@ -36,7 +36,9 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="Home" options={{ headerShown: false }} />
-       
+        <Stack.Screen name="StoryView" options={{ headerShown: false }} />
+        <Stack.Screen name="PostScreen" options={{ headerShown: false }} />
+        <Stack.Screen name="MentionScreen" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

@@ -4,10 +4,10 @@ import { UserData } from "@/src/utils/UserData";
 import { useNavigation } from "@react-navigation/native";
 
 
-const Stories = () => {
+const Highlights = () => {
   const Navigation = useNavigation<any>();
   return (
-    <View style={{ flexDirection: "row", marginTop: 8 }}>
+    <View style={{ flexDirection: "row", marginTop: 15,marginLeft:-16 }}>
       {UserData.map((item) => {
         console.log(item);
         return (
@@ -19,8 +19,8 @@ const Stories = () => {
                 style={{
                   borderWidth: 3,
                   borderRadius: 40,
-                  padding: 2,
-                  borderColor: "red",
+                  padding: 3,
+                  borderColor: 'rgba(128,128,128,0.2)',
                 }}
               >
                 <Image
@@ -37,4 +37,4 @@ const Stories = () => {
   );
 };
 
-export default Stories;
+export default Highlights;

@@ -42,6 +42,7 @@ export default function RootLayout() {
         
         <Stack.Screen name="(screens)" options={{ headerShown: false }} />
         <Stack.Screen name="(mainscreens)" options={{ headerShown: false }} />
+        
         <Stack.Screen
           name="CustomComponents"
           options={{ headerShown: false }}
