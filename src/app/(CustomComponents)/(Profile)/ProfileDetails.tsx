@@ -32,7 +32,7 @@ const ProfileDetails = () => {
                     <Text>posts</Text>
                   </View>
                   <View style={{ marginLeft: 25 }}>
-                    <Text>414</Text>
+                    <Text>12M</Text>
                     <Text>followers</Text>
                   </View>
                   <View style={{ marginLeft: 25 }}>

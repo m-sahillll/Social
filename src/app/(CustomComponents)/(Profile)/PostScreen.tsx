@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,TouchableOpacity,Image } from 'react-native';
+import { UserData } from '@/src/utils/UserData';
 
 const PostsScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Posts Screen</Text>
-    </View>
+    <View style={{flexDirection:'row'}}>
+      
+  </View>
   );
 };
 

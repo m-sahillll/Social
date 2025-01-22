@@ -23,7 +23,7 @@ const ProfileHeader = () => {
         <View style={{ flexDirection: "row" }}>
           <Image
             style={{ height: 20, width: 20 }}
-            source={require("../../assets/images/Lock.png")} />
+            source={require("../../../assets/images/Lock.png")} />
 
           {UserData.map((item) => {
             
@@ -41,7 +41,7 @@ const ProfileHeader = () => {
           <TouchableOpacity onPress={openThreads}>
             <Image
               style={{ height: 25, width: 25 }}
-              source={require("../../assets/images/Threads.png")}
+              source={require("../../../assets/images/Threads.png")}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -50,22 +50,27 @@ const ProfileHeader = () => {
           >
             <Image
               style={{ height: 25, width: 25 }}
-              source={require("../../assets/images/PlusIcon.png")}
+              source={require("../../../assets/images/PlusIcon.png")}
             />
           </TouchableOpacity>
           {pictureOpen && 
-             <DownloadPicture 
-             onClose={() => setPictureOpen(false)} />}
+      <DownloadPicture 
+      onClose={() => setPictureOpen(false)} />}
+          
              
           <TouchableOpacity style={{ marginLeft: 20 }}>
             <Image
               style={{ height: 25, width: 25 }}
-              source={require("../../assets/images/SideBar.png")}
+              source={require("../../../assets/images/SideBar.png")}
             />
           </TouchableOpacity>
+         
         </View>
+        
       </View>
+     
     </SafeAreaView>
+    
   );
 };
 

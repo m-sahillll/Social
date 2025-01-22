@@ -1,12 +1,15 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
-import InputBox from "@/src/CustomComponents/InputBox";
-import CustomButton from "@/src/CustomComponents/CustomButton";
+import React, { useEffect } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import CustomButton2 from "@/src/CustomComponents/CustomButton2";
+import CustomButton from "../(CustomComponents)/CustomButton";
+import CustomButton2 from "../(CustomComponents)/CustomButton2";
+import InputBox from "../(CustomComponents)/InputBox";
 import { useNavigation } from "@react-navigation/native";
+import axios from "axios";
+
 
 const Login = () => {
+
   const navigation = useNavigation();
   return (
     <View>
@@ -39,7 +42,9 @@ const Login = () => {
       >
         <Text style={style.ForgotP}>Forgot password?</Text>
       </TouchableOpacity>
+     
       <View style={{ marginTop: 220 }}>
+        
         <CustomButton2
           style={{}}
           buttonTitle={"Create new account"}

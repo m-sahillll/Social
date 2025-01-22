@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import Header from "@/components/Header";
-import Stories from "@/src/CustomComponents/Home/Stories";
+import Stories from "../(CustomComponents)/(Home)/Stories";
 
 const home = () => {
   return (

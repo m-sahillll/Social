@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useRef } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Image } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
@@ -20,7 +20,7 @@ export const DownloadPicture = ({onClose}:
 ) => {
     const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf')
+    SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf')
   });
 
   useEffect(() => {
@@ -46,13 +46,17 @@ export const DownloadPicture = ({onClose}:
       <BottomSheet
         onClose={onClose}
         ref={bottomSheetRef}
+        index={1}
         onChange={handleSheetChanges}
         snapPoints={["99%"]}
         enablePanDownToClose
-        handleIndicatorStyle={{height:0}}
+  
       >
         <BottomSheetView style={styles.contentContainer}>
           <Text>Awesome 🎉</Text>
+          <Image 
+          style={{height:100,width:100}}
+          source={require("../../assets/images/instagram.png")}/>
         </BottomSheetView>
       </BottomSheet>
     </GestureHandlerRootView>

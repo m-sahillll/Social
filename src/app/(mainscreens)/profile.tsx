@@ -1,16 +1,20 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import ProfileHeader from "@/src/CustomComponents/Profile/ProfileHeader";
-import ProfileDetails from "@/src/CustomComponents/Profile/ProfileDetails";
+import ProfileDetails from "../(CustomComponents)/(Profile)/ProfileDetails";
+import ProfileHeader from "../(CustomComponents)/(Profile)/ProfileHeader";
 import { styles } from "@gorhom/bottom-sheet/lib/typescript/components/bottomSheetScrollable/BottomSheetFlashList";
 import { UserData } from "@/src/utils/UserData";
-import CustomButton2 from "@/src/CustomComponents/CustomButton2";
-import Highlights from "@/src/CustomComponents/Profile/Highlights";
-import ProfileTabs from "@/src/CustomComponents/Profile/ProfileTabs";
+import CustomButton2 from "../(CustomComponents)/CustomButton2";
+import Highlights from "../(CustomComponents)/(Profile)/Highlights";
+import ProfileTabs from "../(CustomComponents)/(Profile)/ProfileTabs";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import PostsScreen from "../(CustomComponents)/(Profile)/PostScreen";
+import MentionScreen from "../(CustomComponents)/(Profile)/MentionScreen";
 
 const profile = () => {
+  const Tab = createMaterialTopTabNavigator();
   return (
-    <View>
+    <View style={{flex:1}}>
       <ProfileHeader />
       <ProfileDetails />
       <View style={{ marginHorizontal: 20 }}>
@@ -59,6 +63,9 @@ const profile = () => {
             </View>
           </View>
           < Highlights />
+          <ProfileTabs />
+                  
+        
          
         </View>
       </View>

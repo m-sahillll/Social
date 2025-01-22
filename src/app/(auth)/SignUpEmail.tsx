@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import InputBox from "@/src/CustomComponents/InputBox";
-import CustomButton from "@/src/CustomComponents/CustomButton";
-import CustomButton2 from "@/src/CustomComponents/CustomButton2";
+import InputBox from "../(CustomComponents)/InputBox";
+import CustomButton from "../(CustomComponents)/CustomButton";
+import CustomButton2 from "../(CustomComponents)/CustomButton2";
 import { AppColor } from "@/src/utils/AppColor";
 import { useNavigation } from "@react-navigation/native";
 
