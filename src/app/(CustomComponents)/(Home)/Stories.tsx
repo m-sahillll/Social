@@ -1,18 +1,26 @@
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import React from 'react';
-import { UserData } from '@/src/utils/UserData';
-import { useNavigation } from '@react-navigation/native';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
+import React from "react";
+import { UserData } from "@/src/utils/UserData";
+import { useNavigation } from "@react-navigation/native";
 
 const Stories = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={{ flexDirection: "row" }}>
       {UserData.map((item) => {
         return (
           <View key={item.id.toString} style={{ marginLeft: 10 }}>
-            <TouchableOpacity 
-          onPress={() => navigation.navigate("StoryView")}>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate("(CustomComponents)", {
+                  screen: "(Home)",
+                  params: {
+                    screen: "StoryView",
+                  },
+                });
+              }}
+            >
               <View style={styles.storyContainer}>
                 <Image source={item.profile} style={styles.storyImage} />
               </View>
@@ -32,8 +40,8 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 40,
     padding: 2,
-    borderColor: 'red',
-    alignItems: 'center',
+    borderColor: "red",
+    alignItems: "center",
   },
   storyImage: {
     height: 60,
@@ -41,6 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   storyText: {
+    alignSelf:'center',
     marginTop: 5,
     fontSize: 12,
   },

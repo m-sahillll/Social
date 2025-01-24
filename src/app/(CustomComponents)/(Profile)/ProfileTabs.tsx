@@ -8,7 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const ProfileTabs = () => {
   return (
-    <View style={{height:100,width:390,marginLeft:-20,marginTop:20}}>
+    <View style={{height:'100%',width:390,marginLeft:-20,marginTop:20}}>
              <Tab.Navigator
                screenOptions={{
                tabBarLabelStyle: { fontSize: 12 },

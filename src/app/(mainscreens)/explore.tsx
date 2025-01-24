@@ -27,6 +27,7 @@ export default function Cart() {
 
       <FlatList
        style={{marginTop:10}}
+       
         data={imageUrls}
         renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}

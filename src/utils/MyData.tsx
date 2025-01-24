@@ -1,64 +1,124 @@
-export const MyData = [
-    {
-      ide: 1,
-      name: "Mohammad Sahil",
-      username: "m_sahillll",
-      profile: require("../assets/data/Profile.png"),
-  
-      story: {
-        time: 10,
-        image: require("../assets/data/Post1.png"),
-      },
-      post: {
-        Post1: {
-          time: "09:00:00",
-          date: "01/05/2023",
-          image: require("../assets/data/Post1.png"),
-          caption: "Hi Everyone, Elon musk is here",
-          like: 30,
-        },
-  
-        Post2: {
-          time: "09:00:00",
-          date: "01/05/2023",
-          image: require("../assets/data/Post2.png"),
-          caption: "Hi Everyone, Elon musk is here",
-          like: 30,
-        },
-  
-        Post3: {
-          time: "09:00:00",
-          date: "01/05/2023",
-          image: require("../assets/data/Post3.png"),
-          caption: "Hi Everyone, Elon musk is here",
-          like: 30,
-        },
-  
-        Post4: {
-          time : '09:00:00',
-          date : '01/05/2023',
-          image : require('../assets/data/Post4.png'),
-          caption : 'Hi Everyone, Elon musk is here',
-          like : 30,
-          },
-  
-          Post5: {
-              time : '09:00:00',
-              date : '01/05/2023',
-              image : require('../assets/data/Post5.png'),
-              caption : 'Hi Everyone, Elon musk is here',
-              like : 30,
-              },
-  
-              Post6: {
-                  time : '09:00:00',
-                  date : '01/05/2023',
-                  image : require('../assets/data/Post6.png'),
-                  caption : 'Hi Everyone, Elon musk is here',
-                  like : 30,
-                  },
-      },
+import Highlights from "../app/(CustomComponents)/(Profile)/Highlights";
 
-  
+export const MyData = [
+  {
+    id: 1,
+    name: "Mohammad Sahil",
+    username: "m_sahillll",
+    profile: require("../assets/data/Profile.png"),
+
+    Highlights: {
+      text: "Me", 
+      time: 10,
+      image: require("../assets/data/H0.jpg"),
     },
+    post: {
+      time: "09:00:00",
+      date: "01/05/2023",
+      image: require("../assets/data/Post1.png"),
+      caption: "Hi Everyone,Sahil is here",
+      like: 1200,
+      comment: 643,
+      share: 238,
+    },
+  },
+  {
+    name: "Mohammad Sahil",
+    username: "m_sahillll",
+    profile: require("../assets/data/Profile.png"),
+    Highlights: {
+      text: "Sky",
+      time: 10,
+      image: require("../assets/data/H1.jpg"),
+    },
+    post: {
+      time: "09:00:00",
+      date: "01/05/2023",
+      image: require("../assets/data/Post2.png"),
+      caption: "You me and BMW. Jodi made in heaven .",
+      like: 583,
+      comment: 234,
+      share: 344,
+    },
+  },
+  {
+    id: 3,
+    name: "Mohammad Sahil",
+    username: "m_sahillll",
+    profile: require("../assets/data/Profile.png"),
+    Highlights: {
+      text: "Memories",
+      time: 8,
+      image: require("../assets/data/H4.jpg"),
+    },
+    post: {
+      time: "04:00 PM",
+      date: "08/04/2023",
+      image: require("../assets/data/Post3.png"),
+      caption: "MEREKO EK VARDAAN HAI 🥵",
+      like: 3350,
+      comment: 378,
+      share: 288,
+    },
+  },
+  {
+    id: 4,
+    name: "Mohammad Sahil",
+    username: "m_sahillll",
+    profile: require("../assets/data/Profile.png"),
+    Highlights: {
+      text: "Jaipur",
+      time: 15,
+      image: require("../assets/data/H3.jpg"),
+    },
+    post: {
+      time: "07:00 AM",
+      date: "12/05/2023",
+      image: require("../assets/data/Post4.png"),
+      caption: "2000 ke note band",
+      like: 380,
+      comment: 230,
+      share: 30,
+    },
+  },
+  {
+    id: 5,
+    name: "Mohammad Sahil",
+    username: "m_sahillll",
+    profile: require("../assets/data/Profile.png"),
+    Highlights: {
+      text: "Nature",
+      time: 13,
+      image: require("../assets/data/H5.jpg"),
+    },
+    post: {
+      time: "07:00 AM",
+      date: "12/05/2023",
+      image: require("../assets/data/Post5.png"),
+      caption: "Wish you all a very Happy New Year 2025!! ",
+      like: 990,
+      comment: 750,
+      share: 303,
+    },
+  },
+  {
+    id: 6,
+    name: "Mohammad Sahil",
+    username: "m_sahillll",
+    profile: require("../assets/data/Profile.png"),
+    Highlights: {
+      text: "Me",
+      time: 10,
+      image: require("../assets/data/elonstory.png"),
+    },
+    post: {
+      time: "09:00:00",
+      date: "01/05/2023",
+      image: require("../assets/data/Post6.png"),
+      caption: "Hi Everyone, Elon musk is here",
+      like: 583,
+      comment: 234,
+      share: 344,
+    },
+  },
 ];

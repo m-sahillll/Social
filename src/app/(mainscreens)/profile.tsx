@@ -7,14 +7,13 @@ import { UserData } from "@/src/utils/UserData";
 import CustomButton2 from "../(CustomComponents)/CustomButton2";
 import Highlights from "../(CustomComponents)/(Profile)/Highlights";
 import ProfileTabs from "../(CustomComponents)/(Profile)/ProfileTabs";
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import PostsScreen from "../(CustomComponents)/(Profile)/PostScreen";
 import MentionScreen from "../(CustomComponents)/(Profile)/MentionScreen";
 
 const profile = () => {
-  const Tab = createMaterialTopTabNavigator();
   return (
-    <View style={{flex:1}}>
+    <View style={{ flex: 1, }}>
       <ProfileHeader />
       <ProfileDetails />
       <View style={{ marginHorizontal: 20 }}>
@@ -26,6 +25,7 @@ const profile = () => {
             if (item.id === 1) {
               return (
                 <View
+                  key={item.id}
                   style={{
                     flexDirection: "row",
                     marginTop: 10,
@@ -48,28 +48,27 @@ const profile = () => {
             return null;
           })}
           <View style={{ flexDirection: "row" }}>
-             <TouchableOpacity style={style.button}>
-                  <Text style={{}}>Add profile</Text>
-             </TouchableOpacity>
+            <TouchableOpacity style={style.button}>
+              <Text style={{}}>Add profile</Text>
+            </TouchableOpacity>
 
             <TouchableOpacity style={[style.button, { marginLeft: 18 }]}>
-                  <Text>Share profile</Text>
+              <Text>Share profile</Text>
             </TouchableOpacity>
 
             <View style={style.AddingUser}>
               <Image
                 style={{ height: 20, width: 20 }}
-                source={require("../../assets/images/AddUser.png")}/>
+                source={require("../../assets/images/AddUser.png")}
+              />
             </View>
           </View>
-          < Highlights />
+          <Highlights />
           <ProfileTabs />
-                  
-        
-         
         </View>
       </View>
     </View>
+    
   );
 };
 
